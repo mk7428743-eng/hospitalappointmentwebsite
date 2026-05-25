@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title> Apex Hospital</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      🏥 MediCare
+    </div>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#home">Home</a>
+      </li>
+
+      <li>
+        <a href="#doctors">Doctors</a>
+      </li>
+
+      <li>
+        <a href="#facilities">Facilities</a>
+      </li>
+
+      <li>
+        <a href="#appointment">
+          Appointment
+        </a>
+      </li>
+
+      <li>
+        <a href="#location">
+          Location
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section
+    class="hero"
+    id="home"
+  >
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>
+        Advanced Hospital Care
+      </h1>
+
+      <p>
+        Book appointments with
+        experienced specialist doctors.
+      </p>
+
+      <button onclick="scrollToAppointment()">
+        Book Appointment
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about-section">
+
+    <div class="about-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3"
+        alt="Hospital"
+      />
+
+    </div>
+
+    <div class="about-text">
+
+      <h2>
+        Welcome to MediCare Hospital
+      </h2>
+
+      <p>
+        MediCare Hospital provides
+        modern healthcare services with
+        expert doctors, emergency
+        services, diagnostics, and
+        patient-friendly appointment
+        management.
+      </p>
+
+      <div class="stats">
+
+        <div class="stat-card">
+          <h3>50+</h3>
+          <p>Doctors</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>24x7</h3>
+          <p>Emergency</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>1000+</h3>
+          <p>Patients</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DOCTORS -->
+
+  <section
+    class="doctor-section"
+    id="doctors"
+  >
+
+    <h2>
+      Our Specialist Doctors
+    </h2>
+
+    <div
+      id="doctorContainer"
+      class="doctor-grid"
+    ></div>
+
+  </section>
+
+  <!-- FACILITIES -->
+
+  <section
+    class="facility-section"
+    id="facilities"
+  >
+
+    <h2>
+      Hospital Facilities
+    </h2>
+
+    <div class="facility-grid">
+
+      <div class="facility-card">
+        🚑 Ambulance Service
+      </div>
+
+      <div class="facility-card">
+        💊 Medical Store
+      </div>
+
+      <div class="facility-card">
+        🧪 Diagnostic Lab
+      </div>
+
+      <div class="facility-card">
+        🛏 ICU & Private Rooms
+      </div>
+
+      <div class="facility-card">
+        📶 Free WiFi
+      </div>
+
+      <div class="facility-card">
+        🩺 24x7 Emergency
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- APPOINTMENT -->
+
+  <section
+    class="appointment-section"
+    id="appointment"
+  >
+
+    <div class="appointment-box">
+
+      <h2>
+        Book Appointment
+      </h2>
+
+      <form id="appointmentForm">
+
+        <input
+          type="text"
+          id="patientName"
+          placeholder="Patient Name"
+          required
+        />
+
+        <input
+          type="number"
+          id="patientAge"
+          placeholder="Patient Age"
+          required
+        />
+
+        <select
+          id="doctorId"
+          required
+        >
+
+          <option value="">
+            Select Doctor
+          </option>
+
+        </select>
+
+        <input
+          type="datetime-local"
+          id="appointmentDate"
+          required
+        />
+
+        <button type="submit">
+          Confirm Appointment
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- RECORDS -->
+
+  <section class="record-section">
+
+    <!-- DOCTOR PANEL -->
+
+<section class="doctor-panel">
+
+  <h2>Doctor Appointment Panel</h2>
+
+  <div class="doctor-search">
+
+    <input
+      type="number"
+      id="searchDoctorId"
+      placeholder="Enter Doctor ID"
+    />
+
+    <button onclick="searchDoctorAppointments()">
+      View Appointments
+    </button>
+
+  </div>
+
+  <div
+    id="doctorAppointments"
+    class="record-grid"
+  ></div>
+
+</section>
+
+<!-- RECORD SECTION -->
+
+<section class="record-section">
+
+  </section>
+
+  <!-- LOCATION -->
+
+  <section
+    class="location-section"
+    id="location"
+  >
+
+    <h2>
+      Hospital Location
+    </h2>
+
+    <div class="location-box">
+
+      <p>
+        📍 Sector 14, Gurgaon,
+        Haryana, India
+      </p>
+
+      <iframe
+        src="https://maps.google.com/maps?q=gurgaon&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+      ></iframe>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 MediCare Hospital
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
